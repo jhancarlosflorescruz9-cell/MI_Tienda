@@ -1,0 +1,52 @@
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+.env.backup
+
+# Dependencies
+vendor/
+node_modules/
+
+# Storage
+/storage/logs/*
+/storage/app/public/*
+!/storage/app/public/.gitkeep
+!/storage/logs/.gitkeep
+
+# Cache
+/bootstrap/cache/*
+!/bootstrap/cache/.gitkeep
+
+# Otros
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Composer
+# composer.lock
+
+# NPM
+# package-lock.json
+
+# IDE
+.phpstorm.meta.php
+_ide_helper.php
+
+# OS
+Thumbs.db
+.directory
+
+# Testing
+.phpunit.result.cache
+coverage/
+
+# Local development
+.env.dusk.local
+
+# Temporary files
+*.tmp
+*.temp
