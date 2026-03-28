@@ -10,5 +10,7 @@ RUN composer install --no-dev
 RUN chown -R www-data:www-data /var/www/html/storage
 RUN chmod -R 775 /var/www/html/storage
 RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 EXPOSE 80
-CMD ["apache2-foreground & php artisan migrate --force"]
+CMD ["/start.sh"]
