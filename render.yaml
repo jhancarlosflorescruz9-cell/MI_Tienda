@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: copias-tipeos
+    runtime: php
+    startCommand: php artisan serve --host 0.0.0.0 --port $PORT
+    buildCommand: composer install && npm install && npm run build && php artisan migrate:fresh --force
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
